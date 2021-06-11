@@ -28,3 +28,28 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: Happy challenge path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: Happy name path
+  steps:
+  - intent: tell_name
+  - action: utter_name
+  - action: utter_my_name
+  - intent: my_name
+    entities:
+    - name: "Eduardo"
+  - slot_was_set:
+      - name: "Eduardo"
+  - action: utter_mobile_number
+  - intent: mobile_number
+    entities:
+    - number: "983747365"
+  - slot_was_set:
+      - number: "983747365"
+  - action: utter_thanks

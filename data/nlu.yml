@@ -77,3 +77,29 @@ nlu:
     - vc é humano
     - Estou falando com um robo?
     - Estou falando com um humano?
+
+- intent: tell_name
+  examples: |
+    - Qual o seu nome?
+    - Como você se chama?
+    - Me diz o seu nome?
+    - Me diga o seu nome?
+    - Como devo te chamar?
+
+- intent: my_name
+  examples: |
+    - Meu nome é [Eduardo]{"entity":"name","value":"Eduardo"}
+    - meu nome é [Joao]{"entity":"name"}
+    - Me chamo [Rafael]{"entity":"name","value":"Rafael"}
+    - me chamo [Ronaldo]{"entity":"name"}
+    - Meu nome é [Fernanda]{"entity":"name","value":"Fernanda"}
+    - Me chamo [Isac]{"entity":"name","value":"Isac"}
+
+- intent: mobile_number
+  examples: |
+    - Meu numero é [983747365]{"entity":"number","value":"983747365"}
+    - Meu numero e [98374-7365]{"entity":"number","value":"98374-7365"}
+    - Meu numero é [99783 7584]{"entity":"number","value":"99783 7584"}
+    - [983747365]{"entity":"number","value":"983747365"}
+    - [98374 7365]{"entity":"number","value":"98374 7365"}
+    

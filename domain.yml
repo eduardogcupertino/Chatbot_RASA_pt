@@ -8,6 +8,23 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - tell_name
+  - my_name:
+      use_entities:
+        - name
+  - mobile_number:
+      use_entities:
+        - number
+
+entities:
+  - name
+  - number
+
+slots:
+  name:
+    type: text
+  number:
+    type: text
 
 responses:
   utter_greet:
@@ -28,6 +45,18 @@ responses:
 
   utter_iamabot:
   - text: "Eu sou um bot."
+
+  utter_name:
+  - text: "Me chamo Tati"
+
+  utter_my_name:
+  - text: "Qual o seu nome?"
+
+  utter_mobile_number:
+  - text: "Qual o seu telefone?"
+
+  utter_thanks:
+  - text: "Obrigado pelas informações!"
 
 session_config:
   session_expiration_time: 60
