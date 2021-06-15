@@ -8,7 +8,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - play_video
   - tell_name
+  - out_of_scope
   - my_name:
       use_entities:
         - name
@@ -49,14 +51,32 @@ responses:
   utter_name:
   - text: "Me chamo Tati"
 
-  utter_my_name:
+  utter_ask_name:
   - text: "Qual o seu nome?"
 
-  utter_mobile_number:
+  utter_ask_number:
   - text: "Qual o seu telefone?"
 
   utter_thanks:
   - text: "Obrigado pelas informações!"
+
+  utter_details_thanks:
+    - text: "Thanks for providing the given details \nName: {Name},\nMobile Number: {Mobile_number}"
+
+  utter_out_of_scope:
+    - text: Desculpe, Eu não entendi o que você disse. Por favor, diga de outra maneira.
+
+actions:
+  - action_submit
+  - action_video
+forms:
+  user_details_form:
+    name:
+      - type: from_entity
+        entity: name
+    number:
+      - type: from_entity
+        entity: number
 
 session_config:
   session_expiration_time: 60

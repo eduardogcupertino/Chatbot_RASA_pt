@@ -102,4 +102,20 @@ nlu:
     - Meu numero é [99783 7584]{"entity":"number","value":"99783 7584"}
     - [983747365]{"entity":"number","value":"983747365"}
     - [98374 7365]{"entity":"number","value":"98374 7365"}
+
+- intent: play_video
+  examples: |
+    - toque o video
+    - abra a url
+    - quero ver o video
+    - me mostre o video
+    - abra o link
+
+- intent: out_of_scope
+  examples: |
+    - Qual a previsão do tempo
+    - quanto é 2 + 2?
+    - que dia é hoje?
+    - quem é o presidente dos eua?
+
     
