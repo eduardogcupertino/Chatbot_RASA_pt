@@ -38,6 +38,11 @@ responses:
 
   utter_did_that_help:
   - text: "isso ajudou?"
+    buttons:
+      - title: "Sim"
+        payload: "/affirm"
+      - title: "Não"
+        payload: "/deny"
 
   utter_happy:
   - text: "Muito bem, siga firme"
